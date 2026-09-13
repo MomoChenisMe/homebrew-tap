@@ -2,26 +2,26 @@
 class Speclink < Formula
   desc "Spec-Driven Development engine and toolkit"
   homepage "https://github.com/MomoChenisMe/speclink"
-  version "0.3.0"
+  version "0.4.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/MomoChenisMe/speclink/releases/download/v0.3.0/speclink-v0.3.0-aarch64-apple-darwin.tar.gz"
-      sha256 "58f50b9b6abb046f092eadfbd56bef023025084988f139bf41086535d7053b1b"
+      url "https://github.com/MomoChenisMe/speclink/releases/download/v0.4.0/speclink-v0.4.0-aarch64-apple-darwin.tar.gz"
+      sha256 "b9b5fa9acac137a745f192d6639ddb96f26e9c64ae0c1790fde4734a2de52d9c"
     else
-      url "https://github.com/MomoChenisMe/speclink/releases/download/v0.3.0/speclink-v0.3.0-x86_64-apple-darwin.tar.gz"
-      sha256 "b90059a95e212698146b854b506c8421f0eb6b84991538d5ea961ce3620b550c"
+      url "https://github.com/MomoChenisMe/speclink/releases/download/v0.4.0/speclink-v0.4.0-x86_64-apple-darwin.tar.gz"
+      sha256 "c5e535d20ea8e21c153d454c5de6657cedec72d03ff995973fd5ceb0df10005c"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/MomoChenisMe/speclink/releases/download/v0.3.0/speclink-v0.3.0-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "bae809726755aac1f0938f96cac4e0ae08513eae0e9aa9cf447986b2e8f74082"
+      url "https://github.com/MomoChenisMe/speclink/releases/download/v0.4.0/speclink-v0.4.0-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "f2d58407fd413d81e300ef47921ba35f5a3fe12603cb76654d52bdd6f85be368"
     else
-      url "https://github.com/MomoChenisMe/speclink/releases/download/v0.3.0/speclink-v0.3.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "64530ea067b3386a9a62edf11c11e9690b460befba8b07e51d87e36496553706"
+      url "https://github.com/MomoChenisMe/speclink/releases/download/v0.4.0/speclink-v0.4.0-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "7966aa56cfe22af56cefe2c7a1378c32747caa9808ac874a9e57bd474027531f"
     end
   end
 
@@ -30,6 +30,6 @@ class Speclink < Formula
   end
 
   test do
-    assert_match "0.3.0", shell_output("#{bin}/speclink --version")
+    assert_match "0.4.0", shell_output("#{bin}/speclink --version")
   end
 end
