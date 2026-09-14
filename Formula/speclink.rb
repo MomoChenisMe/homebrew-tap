@@ -2,26 +2,26 @@
 class Speclink < Formula
   desc "Spec-Driven Development engine and toolkit"
   homepage "https://github.com/MomoChenisMe/speclink"
-  version "0.4.0"
+  version "0.5.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/MomoChenisMe/speclink/releases/download/v0.4.0/speclink-v0.4.0-aarch64-apple-darwin.tar.gz"
-      sha256 "b9b5fa9acac137a745f192d6639ddb96f26e9c64ae0c1790fde4734a2de52d9c"
+      url "https://registry.npmjs.org/@speclink/cli-darwin-arm64/-/cli-darwin-arm64-0.5.0.tgz"
+      sha256 "6a9b8da17d72c7446a663b5e7bf5a24401789e6ccb38722995bbd7a87dff2036"
     else
-      url "https://github.com/MomoChenisMe/speclink/releases/download/v0.4.0/speclink-v0.4.0-x86_64-apple-darwin.tar.gz"
-      sha256 "c5e535d20ea8e21c153d454c5de6657cedec72d03ff995973fd5ceb0df10005c"
+      url "https://registry.npmjs.org/@speclink/cli-darwin-x64/-/cli-darwin-x64-0.5.0.tgz"
+      sha256 "a8acb2cb9ae87874ad058ac2ef4c45f95b22f0308d3d0ad3a09e9d18ec84f264"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/MomoChenisMe/speclink/releases/download/v0.4.0/speclink-v0.4.0-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "f2d58407fd413d81e300ef47921ba35f5a3fe12603cb76654d52bdd6f85be368"
+      url "https://registry.npmjs.org/@speclink/cli-linux-arm64/-/cli-linux-arm64-0.5.0.tgz"
+      sha256 "37db2eaad2a5e339853a0adb7cb948d06da1f9a94888c57fb9f68b6d9438f495"
     else
-      url "https://github.com/MomoChenisMe/speclink/releases/download/v0.4.0/speclink-v0.4.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "7966aa56cfe22af56cefe2c7a1378c32747caa9808ac874a9e57bd474027531f"
+      url "https://registry.npmjs.org/@speclink/cli-linux-x64/-/cli-linux-x64-0.5.0.tgz"
+      sha256 "249359bbd9c7f7bd05e82274bf69c5b6cfc68b5eec93b4a5988c6b370df29835"
     end
   end
 
@@ -30,6 +30,6 @@ class Speclink < Formula
   end
 
   test do
-    assert_match "0.4.0", shell_output("#{bin}/speclink --version")
+    assert_match "0.5.0", shell_output("#{bin}/speclink --version")
   end
 end
