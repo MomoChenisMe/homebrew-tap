@@ -2,26 +2,26 @@
 class Speclink < Formula
   desc "Spec-Driven Development engine and toolkit"
   homepage "https://github.com/MomoChenisMe/speclink"
-  version "0.11.0"
+  version "0.12.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://registry.npmjs.org/@speclink/cli-darwin-arm64/-/cli-darwin-arm64-0.11.0.tgz"
-      sha256 "6da34b65227ea8068a1f96566064f4096dfca90299fe1e445eec1ca097928cdb"
+      url "https://registry.npmjs.org/@speclink/cli-darwin-arm64/-/cli-darwin-arm64-0.12.0.tgz"
+      sha256 "c5b4d815be049eca7ae0978e0c611e66215d44319590d5073910c10b5b4ff710"
     else
-      url "https://registry.npmjs.org/@speclink/cli-darwin-x64/-/cli-darwin-x64-0.11.0.tgz"
-      sha256 "192cbddebcce24c78d82e7194ce0b9046afb184e3f23a3d01d8622b9abe767bd"
+      url "https://registry.npmjs.org/@speclink/cli-darwin-x64/-/cli-darwin-x64-0.12.0.tgz"
+      sha256 "9b5591f6870507fb9b13c2da7b208da44c7ca33fe3ad1a1fd1a97c0c32593bb2"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://registry.npmjs.org/@speclink/cli-linux-arm64/-/cli-linux-arm64-0.11.0.tgz"
-      sha256 "37bab37ddfbf081d3d54f4658c4bcd099dfcb522fc11b39cb7ded2258207bb6a"
+      url "https://registry.npmjs.org/@speclink/cli-linux-arm64/-/cli-linux-arm64-0.12.0.tgz"
+      sha256 "d4d42115021b4c056318823f592562c623435715711626a8b17a450d8ffe14e1"
     else
-      url "https://registry.npmjs.org/@speclink/cli-linux-x64/-/cli-linux-x64-0.11.0.tgz"
-      sha256 "60b223adc14a06b4e5df84402a1f63bd426a19997724b84ab1e528e226e72cae"
+      url "https://registry.npmjs.org/@speclink/cli-linux-x64/-/cli-linux-x64-0.12.0.tgz"
+      sha256 "1e2ff156698c5cec27b0d542171877bcf55d78e8f7676ab006efd38e5dedc180"
     end
   end
 
@@ -30,6 +30,6 @@ class Speclink < Formula
   end
 
   test do
-    assert_match "0.11.0", shell_output("#{bin}/speclink --version")
+    assert_match "0.12.0", shell_output("#{bin}/speclink --version")
   end
 end
